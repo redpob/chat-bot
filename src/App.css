@@ -1,0 +1,124 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+/* .image-container {
+  background-image: url("/profile-picture.jpg");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  margin-right: 1rem;
+} */
+
+.message-container {
+  flex: 1;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.message {
+  background-color: #c0c0c0;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  align-self: flex-start;
+  white-space: normal;
+  max-width: 80%;
+}
+
+.message.bot {
+  position: relative;
+  background-color: #00000000;
+  align-self: flex-start;
+  text-align: left;
+}
+
+ .message.bot::before {
+  content: 'CHAT BOT';
+  position: absolute;
+  top: -0.75rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(192, 192, 192, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.message.user {
+  position: relative;
+  background-color: #00000000;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message.user::before {
+  content: 'YOU';
+  position: absolute;
+  top: -0.75rem;
+  right: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(192, 192, 192, 0.5);
+}
+
+.message .content {
+  background-color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.input-container {
+  display: flex;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background-color: #333333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.input-container input[type="text"]:focus {
+  outline: none;
+  border-color: #999999;
+}
+
+.send-button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #333333;
+  color: #c0c0c0;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #121212;
+}
